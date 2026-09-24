@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexusWeb Studio - Thiết Kế Website Chuyên Nghiệp & Đột Phá Chuyển Đổi</title>
+  <meta name="description" content="Dịch vụ thiết kế website doanh nghiệp, landing page tối ưu chuyển đổi và giải pháp web chuẩn SEO, tốc độ cao.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Lucide Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .gradient-hero {
+      background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.12) 0%, rgba(255, 255, 255, 0) 75%);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- NAVBAR -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/80 transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-700 to-indigo-500 flex items-center justify-center text-white shadow-md shadow-blue-500/20">
+          <i data-lucide="layout" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-slate-900 via-blue-900 to-blue-700 bg-clip-text text-transparent">NexusWeb</span>
+          <span class="text-xs block font-semibold text-blue-600 tracking-wider uppercase">Studio</span>
+        </div>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center gap-8 font-medium text-slate-600 text-sm">
+        <a href="#services" class="hover:text-blue-600 transition-colors">Dịch Vụ</a>
+        <a href="#features" class="hover:text-blue-600 transition-colors">Ưu Điểm</a>
+        <a href="#process" class="hover:text-blue-600 transition-colors">Quy Trình</a>
+        <a href="#pricing" class="hover:text-blue-600 transition-colors">Bảng Giá</a>
+        <a href="#testimonials" class="hover:text-blue-600 transition-colors">Đánh Giá</a>
+      </div>
+
+      <div class="hidden md:flex items-center gap-4">
+        <a href="#contact" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full font-semibold text-sm text-white bg-blue-600 hover:bg-blue-700 shadow-md shadow-blue-600/20 transition-all hover:scale-[1.02]">
+          Nhận Báo Giá Ngay
+          <i data-lucide="arrow-right" class="w-4 h-4 ml-1.5"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Button -->
+      <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-600 hover:text-slate-900">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Container -->
+    <div id="mobileMenu" class="hidden md:hidden px-6 pt-3 pb-6 bg-white border-b border-slate-200 space-y-3 font-medium text-slate-700">
+      <a href="#services" class="block py-2 hover:text-blue-600">Dịch Vụ</a>
+      <a href="#features" class="block py-2 hover:text-blue-600">Ưu Điểm</a>
+      <a href="#process" class="block py-2 hover:text-blue-600">Quy Trình</a>
+      <a href="#pricing" class="block py-2 hover:text-blue-600">Bảng Giá</a>
+      <a href="#contact" class="block text-center py-2.5 rounded-xl font-semibold text-white bg-blue-600">Nhận Báo Giá Ngay</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-16 pb-24 lg:pt-24 lg:pb-32 gradient-hero overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs sm:text-sm font-semibold mb-6 shadow-sm">
+        <span class="flex h-2 w-2 rounded-full bg-blue-600 animate-pulse"></span>
+        Giải Pháp Thiết Kế Web Chuẩn Chuyển Đổi 2026
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight max-w-4xl mx-auto">
+        Biến Website Thành <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Cỗ Máy Tạo Doanh Thu</span> & Thu Hút Khách Hàng Tự Động
+      </h1>
+
+      <p class="mt-6 text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+        Thiết kế hiện đại, chuẩn UI/UX độc bản, tốc độ tải trang dưới 1 giây và tối ưu chuẩn SEO Google giúp doanh nghiệp bứt phá doanh số.
+      </p>
+
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl font-bold text-base text-white bg-blue-600 hover:bg-blue-700 shadow-xl shadow-blue-600/30 transition-all hover:-translate-y-0.5">
+          Tư Vấn Miễn Phí & Nhận Demo
+          <i data-lucide="sparkles" class="w-5 h-5 ml-2"></i>
+        </a>
+        <a href="#pricing" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl font-bold text-base text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 transition-all hover:-translate-y-0.5 shadow-sm">
+          Xem Bảng Giá Dịch Vụ
+        </a>
+      </div>
+
+      <div class="mt-16 pt-12 border-t border-slate-200 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+        <div>
+          <div class="text-3xl sm:text-4xl font-extrabold text-slate-900">180+</div>
+          <div class="text-sm font-medium text-slate-500 mt-1">Dự án đã bàn giao</div>
+        </div>
+        <div>
+          <div class="text-3xl sm:text-4xl font-extrabold text-blue-600">&lt; 1.0s</div>
+          <div class="text-sm font-medium text-slate-500 mt-1">Tốc độ load trang</div>
+        </div>
+        <div>
+          <div class="text-3xl sm:text-4xl font-extrabold text-slate-900">3.5x</div>
+          <div class="text-sm font-medium text-slate-500 mt-1">Tăng tỷ lệ chuyển đổi</div>
+        </div>
+        <div>
+          <div class="text-3xl sm:text-4xl font-extrabold text-blue-600">99.6%</div>
+          <div class="text-sm font-medium text-slate-500 mt-1">Khách hàng hài lòng</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="services" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-blue-600">Dịch Vụ Cung Cấp</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Giải Pháp Thiết Kế Toàn Diện</p>
+        <p class="text-slate-600 mt-3">Tùy biến theo từng mô hình kinh doanh và mục tiêu tăng trưởng của anh/chị.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-300 group">
+          <div class="w-14 h-14 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="zap" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Landing Page Tối Ưu Chuyển Đổi</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            Thiết kế chuyên biệt cho chạy quảng cáo Facebook, Google Ads, TikTok Ads. Cấu trúc nội dung thuyết phục, CTA mạnh mẽ giúp bứt phá đơn hàng.
+          </p>
+          <ul class="space-y-2 text-sm text-slate-700">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-600"></i> Bố cục Storytelling chuẩn Sales</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-600"></i> Tích hợp form đăng ký & chat Zalo/FB</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-600"></i> Load thần tốc dưới 0.8s</li>
+          </ul>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-300 group">
+          <div class="w-14 h-14 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="globe" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Website Doanh Nghiệp Chuẩn Thương Hiệu</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            Khẳng định uy tín và vị thế của công ty trên môi trường số. Giao diện sang trọng, chuyên nghiệp, truyền tải trọn vẹn giá trị cốt lõi.
+          </p>
+          <ul class="space-y-2 text-sm text-slate-700">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-600"></i> Chuẩn UI/UX cao cấp độc quyền</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-600"></i> Trang giới thiệu, dịch vụ, tin tức</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-600"></i> Tối ưu SEO On-Page chuẩn Google</li>
+          </ul>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-300 group">
+          <div class="w-14 h-14 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="shopping-cart" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Website Bán Hàng E-Commerce</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            Hệ thống bán hàng trực tuyến mạnh mẽ với giỏ hàng thông minh, quản lý sản phẩm trực quan và tích hợp cổng thanh toán tự động.
+          </p>
+          <ul class="space-y-2 text-sm text-slate-700">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Quản lý kho & đơn hàng mượt mà</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Thanh toán Momo, VNPAY, Chuyển khoản</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Trải nghiệm mua sắm trên Mobile siêu tốc</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES / ADVANTAGES -->
+  <section id="features" class="py-20 bg-slate-100/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-blue-600">Cam Kết Chất Lượng</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Tại Sao Khách Hàng Chọn Chúng Tôi?</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm">
+          <div class="text-blue-600 mb-4"><i data-lucide="gauge" class="w-8 h-8"></i></div>
+          <h4 class="font-bold text-slate-900 text-lg mb-2">Tốc Độ Cực Nhanh</h4>
+          <p class="text-slate-600 text-sm">Điểm Google PageSpeed 95+, giữ chân khách hàng ngay từ giây đầu tiên.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm">
+          <div class="text-blue-600 mb-4"><i data-lucide="smartphone" class="w-8 h-8"></i></div>
+          <h4 class="font-bold text-slate-900 text-lg mb-2">Tương Thích Mọi Thiết Bị</h4>
+          <p class="text-slate-600 text-sm">Hiển thị mượt mà từ iPhone, Android đến máy tính bảng và màn hình lớn.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm">
+          <div class="text-blue-600 mb-4"><i data-lucide="search" class="w-8 h-8"></i></div>
+          <h4 class="font-bold text-slate-900 text-lg mb-2">Chuẩn SEO Quốc Tế</h4>
+          <p class="text-slate-600 text-sm">Cấu trúc Schema, thẻ Meta và Sitemap giúp website dễ dàng lên TOP tìm kiếm.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm">
+          <div class="text-blue-600 mb-4"><i data-lucide="shield-check" class="w-8 h-8"></i></div>
+          <h4 class="font-bold text-slate-900 text-lg mb-2">Bảo Hành & Hỗ Trợ 24/7</h4>
+          <p class="text-slate-600 text-sm">Hỗ trợ kỹ thuật trọn đời, backup dữ liệu định kỳ, bảo mật SSL an toàn tuyệt đối.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS SECTION -->
+  <section id="process" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-blue-600">Quy Trình Làm Việc</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">4 Bước Đơn Giản & Hiệu Quả</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+        <div class="relative text-center">
+          <div class="w-16 h-16 rounded-2xl bg-blue-600 text-white font-extrabold text-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-blue-600/30">
+            01
+          </div>
+          <h3 class="font-bold text-slate-900 text-lg mb-2">Tư Vấn & Khảo Sát</h3>
+          <p class="text-slate-600 text-sm">Lắng nghe nhu cầu, định hình mục tiêu và chọn cấu trúc trang tối ưu nhất.</p>
+        </div>
+
+        <div class="relative text-center">
+          <div class="w-16 h-16 rounded-2xl bg-blue-600 text-white font-extrabold text-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-blue-600/30">
+            02
+          </div>
+          <h3 class="font-bold text-slate-900 text-lg mb-2">Thiết Kế UI/UX</h3>
+          <p class="text-slate-600 text-sm">Phác thảo giao diện hiện đại, duyệt mẫu demo trực tiếp cùng khách hàng.</p>
+        </div>
+
+        <div class="relative text-center">
+          <div class="w-16 h-16 rounded-2xl bg-blue-600 text-white font-extrabold text-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-blue-600/30">
+            03
+          </div>
+          <h3 class="font-bold text-slate-900 text-lg mb-2">Lập Trình & Tối Ưu</h3>
+          <p class="text-slate-600 text-sm">Hiện thực hóa giao diện bằng code sạch, tối ưu tốc độ và kết nối tính năng.</p>
+        </div>
+
+        <div class="relative text-center">
+          <div class="w-16 h-16 rounded-2xl bg-blue-600 text-white font-extrabold text-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-blue-600/30">
+            04
+          </div>
+          <h3 class="font-bold text-slate-900 text-lg mb-2">Bàn Giao & Bảo Hành</h3>
+          <p class="text-slate-600 text-sm">Hướng dẫn quản trị chi tiết, bàn giao toàn bộ mã nguồn và hỗ trợ kỹ thuật.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING SECTION -->
+  <section id="pricing" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-blue-600">Bảng Giá Minh Bạch</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Lựa Chọn Gói Dịch Vụ Phù Hợp</p>
+        <p class="text-slate-600 mt-3">Không phí ẩn, không phát sinh chi phí bất ngờ trong suốt quá trình triển khai.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        <!-- Plan 1 -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Khởi Đầu</span>
+            <h3 class="text-2xl font-bold text-slate-900 mt-1">Landing Page Đơn</h3>
+            <p class="text-slate-600 text-sm mt-2">Dành cho chiến dịch ra mắt sản phẩm hoặc chạy ads ngắn hạn.</p>
+            <div class="my-6">
+              <span class="text-4xl font-extrabold text-slate-900">2.500.000đ</span>
+              <span class="text-slate-500 text-sm"> / lần</span>
+            </div>
+            <ul class="space-y-3 text-sm text-slate-600 border-t border-slate-100 pt-6">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-600"></i> Thiết kế 1 Landing Page hoàn chỉnh</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-600"></i> Tối ưu Mobile Responsive</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-600"></i> Tích hợp nút Gọi, Chat Zalo/FB</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-600"></i> Tặng kèm chứng chỉ bảo mật SSL</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-600"></i> Bàn giao sau 3 ngày</li>
+            </ul>
+          </div>
+          <a href="#contact" class="mt-8 block text-center py-3 rounded-xl font-semibold text-blue-600 border border-blue-600 hover:bg-blue-50 transition-colors">
+            Đăng Ký Gói Này
+          </a>
+        </div>
+
+        <!-- Plan 2 (Highlighted) -->
+        <div class="bg-gradient-to-b from-blue-900 to-indigo-950 text-white rounded-2xl p-8 shadow-xl shadow-blue-900/20 flex flex-col justify-between relative transform md:-translate-y-2">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-blue-500 text-white text-xs font-bold uppercase tracking-wider">
+            Phổ Biến Nhất
+          </div>
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-300">Doanh Nghiệp Tiêu Chuẩn</span>
+            <h3 class="text-2xl font-bold text-white mt-1">Web Doanh Nghiệp Pro</h3>
+            <p class="text-blue-100/80 text-sm mt-2">Dành cho công ty muốn khẳng định thương hiệu chuyên nghiệp.</p>
+            <div class="my-6">
+              <span class="text-4xl font-extrabold text-white">5.900.000đ</span>
+              <span class="text-blue-200 text-sm"> / lần</span>
+            </div>
+            <ul class="space-y-3 text-sm text-blue-100/90 border-t border-blue-800/80 pt-6">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-400"></i> Đầy đủ 5 - 8 trang chuyên nghiệp</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-400"></i> Tối ưu SEO On-Page chuẩn Google</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-400"></i> Tốc độ tải trang siêu tốc &lt; 1s</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-400"></i> Hệ thống quản trị nội dung dễ dùng</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-400"></i> Miễn phí tên miền quốc tế 1 năm</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-400"></i> Bảo hành kỹ thuật trọn đời</li>
+            </ul>
+          </div>
+          <a href="#contact" class="mt-8 block text-center py-3 rounded-xl font-bold text-blue-900 bg-white hover:bg-blue-50 transition-colors shadow-md">
+            Chọn Gói Doanh Nghiệp
+          </a>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Toàn Diện</span>
+            <h3 class="text-2xl font-bold text-slate-900 mt-1">E-Commerce & Custom</h3>
+            <p class="text-slate-600 text-sm mt-2">Dành cho shop bán hàng lớn hoặc hệ thống theo yêu cầu riêng.</p>
+            <div class="my-6">
+              <span class="text-4xl font-extrabold text-slate-900">9.500.000đ+</span>
+              <span class="text-slate-500 text-sm"> / lần</span>
+            </div>
+            <ul class="space-y-3 text-sm text-slate-600 border-t border-slate-100 pt-6">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-600"></i> Giỏ hàng, đơn hàng & thanh toán online</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-600"></i> Tích hợp AI chatbot hỗ trợ tư vấn</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-600"></i> Đa ngôn ngữ (Việt - Anh)</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-600"></i> Tùy chỉnh tính năng không giới hạn</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-600"></i> Đào tạo sử dụng 1 kèm 1</li>
+            </ul>
+          </div>
+          <a href="#contact" class="mt-8 block text-center py-3 rounded-xl font-semibold text-blue-600 border border-blue-600 hover:bg-blue-50 transition-colors">
+            Tư Vấn Gói Cao Cấp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-blue-600">Cảm Nhận Khách Hàng</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Đồng Hành Cùng 180+ Doanh Nghiệp</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
+          <div class="flex text-amber-400 mb-3">
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          </div>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            "Từ khi làm lại Landing Page bên NexusWeb, tỷ lệ để lại số điện thoại chạy ads tăng gấp đôi mà chi phí lại giảm rõ rệt. Rất ưng ý về tiến độ làm việc!"
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center">TL</div>
+            <div>
+              <div class="text-sm font-bold text-slate-900">Trần Linh</div>
+              <div class="text-xs text-slate-500">CEO, Thời Trang LinStore</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
+          <div class="flex text-amber-400 mb-3">
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          </div>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            "Đội ngũ làm việc rất có tâm và am hiểu về trải nghiệm người dùng (UX). Website công ty mình chạy cực kỳ mượt, khách hàng đối tác khen rất nhiều."
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center">HN</div>
+            <div>
+              <div class="text-sm font-bold text-slate-900">Hoàng Nam</div>
+              <div class="text-xs text-slate-500">Giám đốc Vận Hành, Nam An Logistics</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
+          <div class="flex text-amber-400 mb-3">
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          </div>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            "Hỗ trợ kỹ thuật sau bàn giao rất nhanh chóng và nhiệt tình. Hướng dẫn sử dụng quản trị dễ hiểu, người không rành công nghệ cũng dùng được."
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center">QT</div>
+            <div>
+              <div class="text-sm font-bold text-slate-900">Quang Thắng</div>
+              <div class="text-xs text-slate-500">Founder, Green Academy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM & CTA -->
+  <section id="contact" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-400">Liên Hệ Ngay</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold mt-2 leading-tight">
+            Sẵn Sàng Xây Dựng Website Đẳng Cấp Cho Riêng Bạn?
+          </h2>
+          <p class="text-slate-400 mt-4 leading-relaxed">
+            Để lại thông tin hoặc liên hệ trực tiếp để nhận bản đề xuất cấu trúc web & báo giá chi tiết hoàn toàn miễn phí trong vòng 15 phút.
+          </p>
+
+          <div class="mt-8 space-y-4">
+            <div class="flex items-center gap-3 text-slate-300">
+              <div class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-blue-400">
+                <i data-lucide="phone-call" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400">Hotline / Zalo</div>
+                <div class="font-bold text-white">0988.xxx.xxx</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 text-slate-300">
+              <div class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-blue-400">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400">Email tư vấn</div>
+                <div class="font-bold text-white">contact@nexusweb.vn</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 text-slate-300">
+              <div class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-blue-400">
+                <i data-lucide="clock" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400">Thời gian làm việc</div>
+                <div class="font-bold text-white">8:00 - 22:00 (Cả Thứ 7 & CN)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Card -->
+        <div class="bg-white rounded-2xl p-8 text-slate-900 shadow-2xl">
+          <h3 class="text-xl font-bold mb-1">Nhận Báo Giá Miễn Phí</h3>
+          <p class="text-sm text-slate-500 mb-6">Chúng tôi sẽ liên hệ lại với anh/chị ngay lập tức.</p>
+
+          <form onsubmit="event.preventDefault(); alert('Cảm ơn bạn! Thông tin đã được gửi thành công. Chúng tôi sẽ liên hệ trong ít phút.');" class="space-y-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Họ và tên của bạn</label>
+              <input type="text" required placeholder="Ví dụ: Lê Văn Minh" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition-all">
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Số điện thoại / Zalo</label>
+              <input type="tel" required placeholder="Ví dụ: 0912345678" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition-all">
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Dịch vụ bạn quan tâm</label>
+              <select class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition-all bg-white text-slate-700">
+                <option value="landing">Landing Page tối ưu chuyển đổi</option>
+                <option value="business">Website Doanh nghiệp</option>
+                <option value="ecommerce">Website Bán hàng E-Commerce</option>
+                <option value="other">Tư vấn theo yêu cầu riêng</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Ghi chú thêm (nếu có)</label>
+              <textarea rows="3" placeholder="Mô tả ngắn gọn ý tưởng hoặc đường link website bạn thích..." class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition-all"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3.5 rounded-xl font-bold text-white bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-600/30 transition-all hover:scale-[1.01]">
+              Gửi Yêu Cầu Tư Vấn
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-slate-500 py-12 text-sm border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white font-bold">N</div>
+        <span class="text-white font-bold text-base">NexusWeb Studio</span>
+      </div>
+      <div>
+        © 2026 NexusWeb Studio. All rights reserved. Thiết kế tối ưu cho chuyển đổi cao.
+      </div>
+      <div class="flex gap-4 text-xs">
+        <a href="#" class="hover:text-white">Điều khoản</a>
+        <a href="#" class="hover:text-white">Bảo mật</a>
+        <a href="#contact" class="hover:text-white">Liên hệ</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for icons and mobile menu -->
+  <script>
+    lucide.createIcons();
+
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
